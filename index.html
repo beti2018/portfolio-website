@@ -5,42 +5,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Bethel Bantidagn, a third-year Software Engineering student at Arba Minch University, learning Java and full-stack web development.">
+  <meta
+    name="description"
+    content="Bethel Bantidagn, a third-year Software Engineering student at Arba Minch University, learning Java and full-stack web development."
+  >
   <meta name="theme-color" content="#030817">
 
   <!-- Social media preview -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Bethel Bantidagn | Software Engineering Student">
-  <meta property="og:description" content="Explore my software engineering journey, technical skills, projects, and internship goals.">
-  <meta property="og:url" content="https://beti2018.github.io/portfolio-website/">
-  <meta property="og:image" content="https://beti2018.github.io/portfolio-website/image/social-preview.jpg">
+  <meta
+    property="og:description"
+    content="Explore my software engineering journey, technical skills, projects, and career goals."
+  >
+  <meta
+    property="og:url"
+    content="https://beti2018.github.io/portfolio-website/"
+  >
+  <meta
+    property="og:image"
+    content="https://beti2018.github.io/portfolio-website/image/social-preview.jpg"
+  >
 
   <!-- Browser tab icon -->
   <link rel="icon" type="image/png" href="image/favicon.png">
 
+  <!-- Page title -->
   <title>BETHEL BANTIDAGN | Software Engineer</title>
 
+  <!-- Stylesheet and JavaScript -->
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
 
 <body>
-  <!-- Header -->
+  <!-- Header and Navigation -->
   <header class="site-header">
     <a class="logo" href="#home" aria-label="CIB home">
       <img src="image/cib-logo.png" alt="CIB logo">
     </a>
 
-    <button class="menu-toggle"
-            aria-label="Toggle navigation"
-            aria-expanded="false">
+    <button
+      class="menu-toggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="main-navigation"
+      type="button"
+    >
       <span></span>
       <span></span>
       <span></span>
     </button>
 
-    <nav class="main-nav" aria-label="Main navigation">
-      <a class="nav-link active" href="#home">Home</a>
+    <nav
+      class="main-nav"
+      id="main-navigation"
+      aria-label="Main navigation"
+    >
+      <a class="nav-link active" href="#home" aria-current="page">Home</a>
       <a class="nav-link" href="#about">About</a>
       <a class="nav-link" href="#projects">Projects</a>
       <a class="nav-link" href="#contact">Contact</a>
@@ -48,12 +70,12 @@
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section class="hero section-wrap" id="home">
       <div class="hero-content">
-
-        <!-- Day 3: New greeting -->
-        <p class="eyebrow hero-greeting">WELCOME TO MY PORTFOLIO</p>
+        <p class="eyebrow hero-greeting">
+          WELCOME TO MY PORTFOLIO
+        </p>
 
         <h1>
           BETHEL<br>
@@ -72,68 +94,59 @@
           focus on full-stack development.
         </p>
 
+        <!-- Technical Skills -->
         <div class="skills" aria-label="Technical skills">
-          <span>Java</span>
-          <span>HTML &amp; CSS</span>
-          <span>JavaScript</span>
-          <span>Git &amp; GitHub</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">HTML &amp; CSS</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Git &amp; GitHub</span>
         </div>
 
+        <!-- Hero Action Links -->
         <div class="hero-actions">
-          <a class="button primary" href="#projects">
-            View My Projects <span aria-hidden="true">↗</span>
+          <a class="btn btn-primary" href="#projects">
+            View My Projects
+            <span aria-hidden="true">↗</span>
           </a>
 
-          <a class="button secondary" href="#contact">
+          <a class="btn btn-outline" href="#contact">
             Contact Me
           </a>
         </div>
       </div>
 
-      <!-- Coding illustration -->
-      <div class="hero-visual" aria-hidden="true">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-        <div class="orbit orbit-three"></div>
-
-        <span class="planet planet-one"></span>
-        <span class="planet planet-two"></span>
-        <span class="planet planet-three"></span>
-
-        <div class="code-window">
-          <div class="window-top">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <div class="code-content">
-            <i></i><b class="line cyan w-45"></b>
-            <i></i><b class="line purple w-35"></b>
-            <b class="line cyan w-25"></b>
-            <i></i><b class="line purple w-55"></b>
-            <i></i><b class="line cyan w-65"></b>
-            <i></i><b class="line blue w-48"></b>
-            <i></i><b class="line purple w-38"></b>
-            <i></i><b class="line cyan w-28"></b>
-          </div>
-        </div>
-
-        <div class="code-badge">&lt;/&gt;</div>
+      <!-- Hero Image -->
+      <div class="hero-visual">
+        <img
+          src="image/hero-background.png"
+          alt="Futuristic software development workspace with a laptop and programming technologies"
+          width="1536"
+          height="1024"
+          fetchpriority="high"
+        >
       </div>
     </section>
 
-    <!-- About -->
-    <section class="content-section about-section" id="about">
+    <!-- About Section -->
+    <section
+      class="content-section about-section"
+      id="about"
+      aria-labelledby="about-heading"
+    >
       <p class="eyebrow">01 / ABOUT</p>
 
-      <h2>Creating solutions through technology.</h2>
+      <h2 id="about-heading">
+        Creating Solutions Through Technology.
+      </h2>
 
       <p class="about-intro">
-        I enjoy exploring how software works and turning
-        ideas into practical digital solutions. My studies
-        provide a foundation for continued learning and
-        hands-on development.
+        I am Bethel Bantidagn, a third-year Software Engineering
+        student at Arba Minch University. I enjoy understanding
+        how software works and building useful digital solutions.
+        My current technical skills include Java, HTML, CSS, and
+        JavaScript. I am interested in full-stack development
+        and continuously improving my programming and
+        problem-solving skills through practical projects.
       </p>
 
       <div class="about-grid">
@@ -141,8 +154,9 @@
           <span class="about-number">01</span>
           <h3>Education</h3>
           <p>
-            Software Engineering at Arba Minch University,
-            with a focus on programming and software design.
+            Studying Software Engineering at Arba Minch University,
+            with an interest in programming, software design,
+            and practical problem-solving.
           </p>
         </article>
 
@@ -150,8 +164,9 @@
           <span class="about-number">02</span>
           <h3>Technical Skills</h3>
           <p>
-            Intermediate Java, alongside HTML, CSS,
-            JavaScript, Git, and GitHub.
+            Intermediate Java, alongside HTML, CSS, JavaScript,
+            Git, and GitHub. I continue to strengthen these skills
+            through coursework and personal projects.
           </p>
         </article>
 
@@ -159,31 +174,44 @@
           <span class="about-number">03</span>
           <h3>Career Goals</h3>
           <p>
-            Developing practical projects and preparing
-            for software internships, remote work,
-            and freelance opportunities.
+            Building practical software projects and preparing
+            for software engineering internships, remote work,
+            and freelance opportunities, with an interest in
+            full-stack development.
           </p>
         </article>
       </div>
     </section>
 
-    <!-- Projects placeholder -->
-    <section class="content-section" id="projects">
+    <!-- Projects Section -->
+    <section
+      class="content-section"
+      id="projects"
+      aria-labelledby="projects-heading"
+    >
       <p class="eyebrow">02 / SELECTED WORK</p>
-      <h2>Projects</h2>
+
+      <h2 id="projects-heading">Projects</h2>
+
       <p>
-        A showcase of applications and projects built
-        through practice and continued learning.
+        A showcase of applications and projects developed through
+        practice, coursework, and continued learning.
       </p>
     </section>
 
-    <!-- Contact placeholder -->
-    <section class="content-section" id="contact">
+    <!-- Contact Section -->
+    <section
+      class="content-section"
+      id="contact"
+      aria-labelledby="contact-heading"
+    >
       <p class="eyebrow">03 / GET IN TOUCH</p>
-      <h2>Let's connect.</h2>
+
+      <h2 id="contact-heading">Let’s connect.</h2>
+
       <p>
-        Get in touch to discuss software projects,
-        internship opportunities, or collaboration.
+        I welcome opportunities to discuss software projects,
+        internships, and collaboration with other developers.
       </p>
     </section>
   </main>
@@ -193,7 +221,7 @@
     <p>
       © <span id="year">2026</span>
       BETHEL BANTIDAGN
-      <span class="footer-dot">·</span>
+      <span class="footer-dot" aria-hidden="true">·</span>
       Built with HTML, CSS &amp; JavaScript.
     </p>
   </footer>

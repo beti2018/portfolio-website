@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Welcome to the portfolio of Bethel Bantidagn, a Software Engineering student at Arba Minch University.">
+
+    <meta name="theme-color" content="#000000">
+
+    <title>Welcome | Bethel Bantidagn</title>
+
+    <style>
+        /* ========================================
+           1. GLOBAL SETTINGS
+        ======================================== */
+
+        :root {
+            --bg: #000000;
+            --text: #ffffff;
+            --muted: #d4d4e4;
+            --purple: #c084fc;
+            --violet: #8b5cf6;
+            --pink: #e879f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            min-height: 100%;
+            background: var(--bg);
+        }
+
+        body {
+            min-height: 100vh;
+            overflow: hidden;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Inter, "Segoe UI", Arial, sans-serif;
+            opacity: 1;
+            transition: opacity 0.8s ease;
+        }
+
+        body.leaving {
+            opacity: 0;
+        }
+
+        /* ========================================
+           2. PURPLE BACKGROUND EFFECTS
+        ======================================== */
+
+        .background-glow {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: min(90vw, 950px);
+            height: min(90vw, 950px);
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background: radial-gradient(
+                circle,
+                rgba(124, 58, 237, 0.22) 0%,
+                rgba(88, 28, 135, 0.12) 35%,
+                rgba(0, 0, 0, 0) 70%
+            );
+            pointer-events: none;
+            z-index: 0;
+            animation: glowPulse 5s ease-in-out infinite alternate;
+        }
+
+        .orb {
+            position: fixed;
+            width: 280px;
+            height: 280px;
+            border: 1px solid rgba(192, 132, 252, 0.13);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .orb-one {
+            top: -130px;
+            right: -90px;
+            box-shadow: 0 0 100px rgba(139, 92, 246, 0.12);
+        }
+
+        .orb-two {
+            bottom: -170px;
+            left: -100px;
+            width: 360px;
+            height: 360px;
+            border-color: rgba(232, 121, 249, 0.12);
+        }
+
+        /* ========================================
+           3. WELCOME LAYOUT
+        ======================================== */
+
+        .welcome {
+            position: relative;
+            z-index: 1;
+            width: min(94%, 1100px);
+            min-height: 100vh;
+            margin: 0 auto;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* ========================================
+           4. CIB LOGO
+        ======================================== */
+
+        .logo {
+            width: 140px;
+            height: 95px;
+            margin: 0 auto 42px;
+            display: grid;
+            place-items: center;
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            flex-shrink: 0;
+            animation: logoAppear 1s ease both;
+        }
+
+        .logo img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border: none;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+        }
+
+        /* ========================================
+           5. WELCOME HEADING
+        ======================================== */
+
+        .eyebrow {
+            margin: 0 0 24px;
+            color: var(--purple);
+            font-size: clamp(1rem, 2.5vw, 1.45rem);
+            font-weight: 700;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            text-shadow: 0 0 25px rgba(192, 132, 252, 0.35);
+            animation: textAppear 1s ease 0.15s both;
+        }
+
+        /* ========================================
+           6. LARGE NAME
+        ======================================== */
+
+        h1 {
+            margin: 0;
+            color: #ffffff;
+            font-size: clamp(3rem, 10vw, 7.5rem);
+            font-weight: 800;
+            line-height: 1.08;
+            letter-spacing: -3px;
+            text-shadow: 0 0 35px rgba(139, 92, 246, 0.18);
+            animation: textAppear 1s ease 0.3s both;
+        }
+
+        h1 span {
+            display: block;
+            margin-top: 12px;
+            background: linear-gradient(
+                100deg,
+                #ffffff 5%,
+                #d8b4fe 40%,
+                #a855f7 75%,
+                #7c3aed 100%
+            );
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* ========================================
+           7. INTRODUCTION AND MOTTO
+        ======================================== */
+
+        .subtitle {
+            margin: 32px 0 0;
+            color: var(--muted);
+            font-size: clamp(1.05rem, 2.5vw, 1.45rem);
+            font-weight: 400;
+            line-height: 1.9;
+            letter-spacing: 0.5px;
+            animation: textAppear 1s ease 0.45s both;
+        }
+
+        .subtitle .motto {
+            display: inline-block;
+            margin-top: 8px;
+            color: var(--purple);
+            font-weight: 600;
+        }
+
+        /* ========================================
+           8. DECORATIVE PURPLE LINE
+        ======================================== */
+
+        .accent-line {
+            width: 190px;
+            height: 4px;
+            margin: 38px auto 0;
+            border-radius: 50px;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                #c084fc,
+                #7c3aed,
+                #e879f9,
+                transparent
+            );
+            box-shadow: 0 0 25px rgba(168, 85, 247, 0.6);
+            animation: lineAppear 1s ease 0.6s both;
+        }
+
+        /* ========================================
+           9. SUBTLE BOTTOM LABEL
+        ======================================== */
+
+        .bottom-label {
+            position: absolute;
+            bottom: 28px;
+            left: 0;
+            right: 0;
+            color: rgba(212, 212, 228, 0.55);
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-align: center;
+            animation: textAppear 1s ease 0.8s both;
+        }
+
+        /* ========================================
+           10. ANIMATIONS
+        ======================================== */
+
+        @keyframes glowPulse {
+            from {
+                opacity: 0.65;
+                transform: translate(-50%, -50%) scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1.08);
+            }
+        }
+
+        @keyframes logoAppear {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes textAppear {
+            from {
+                opacity: 0;
+                transform: translateY(22px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes lineAppear {
+            from {
+                opacity: 0;
+                transform: scaleX(0.4);
+            }
+
+            to {
+                opacity: 1;
+                transform: scaleX(1);
+            }
+        }
+
+        /* ========================================
+           11. MOBILE RESPONSIVENESS
+        ======================================== */
+
+        @media (max-width: 600px) {
+            .welcome {
+                width: 100%;
+                padding: 40px 16px 65px;
+            }
+
+            .logo {
+                width: 110px;
+                height: 75px;
+                margin-bottom: 34px;
+            }
+
+            .eyebrow {
+                margin-bottom: 20px;
+                letter-spacing: 3px;
+            }
+
+            h1 {
+                letter-spacing: -1.5px;
+            }
+
+            .subtitle {
+                margin-top: 26px;
+                line-height: 1.8;
+            }
+
+            .accent-line {
+                width: 145px;
+                margin-top: 30px;
+            }
+
+            .bottom-label {
+                bottom: 18px;
+                font-size: 0.65rem;
+                letter-spacing: 2px;
+            }
+
+            .orb {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        /* ========================================
+           12. REDUCED-MOTION ACCESSIBILITY
+        ======================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-glow" aria-hidden="true"></div>
+    <div class="orb orb-one" aria-hidden="true"></div>
+    <div class="orb orb-two" aria-hidden="true"></div>
+
+    <main class="welcome">
+        <div class="logo">
+            <img src="image/cib-logo.png" alt="CIB Logo">
+        </div>
+
+        <p class="eyebrow">Welcome to my portfolio</p>
+
+        <h1>
+            BETHEL
+            <span>BANTIDAGN</span>
+        </h1>
+
+        <p class="subtitle">
+            Software Engineering Student<br>
+            <span class="motto">Driven by Logic. Inspired by Innovation.</span>
+        </p>
+
+        <div class="accent-line" aria-hidden="true"></div>
+
+        <p class="bottom-label">Software Engineering · Full-Stack Development</p>
+    </main>
+
+    <script>
+        window.addEventListener("load", () => {
+            const reducedMotion = window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches;
+
+            const transitionDelay = reducedMotion ? 500 : 4000;
+            const fadeDelay = reducedMotion ? 50 : 800;
+
+            setTimeout(() => {
+                document.body.classList.add("leaving");
+
+                setTimeout(() => {
+                    window.location.replace("index.html");
+                }, fadeDelay);
+            }, transitionDelay);
+        });
+    </script>
+</body>
+</html>

@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Welcome to the portfolio of Bethel Bantidagn, a Software Engineering student at Arba Minch University.">
+    <meta
+        name="description"
+        content="Welcome to the portfolio of Bethel Bantidagn, a Software Engineering student at Arba Minch University."
+    >
 
     <meta name="theme-color" content="#000000">
 
@@ -38,6 +41,7 @@
 
         body {
             min-height: 100vh;
+            min-height: 100dvh;
             overflow: hidden;
             background: var(--bg);
             color: var(--text);
@@ -66,7 +70,7 @@
                 circle,
                 rgba(124, 58, 237, 0.22) 0%,
                 rgba(88, 28, 135, 0.12) 35%,
-                rgba(0, 0, 0, 0) 70%
+                transparent 70%
             );
             pointer-events: none;
             z-index: 0;
@@ -106,6 +110,7 @@
             z-index: 1;
             width: min(94%, 1100px);
             min-height: 100vh;
+            min-height: 100dvh;
             margin: 0 auto;
             padding: 60px 20px;
             display: flex;
@@ -232,7 +237,7 @@
         }
 
         /* ========================================
-           9. SUBTLE BOTTOM LABEL
+           9. BOTTOM LABEL
         ======================================== */
 
         .bottom-label {
@@ -240,6 +245,7 @@
             bottom: 28px;
             left: 0;
             right: 0;
+            padding: 0 12px;
             color: rgba(212, 212, 228, 0.55);
             font-size: 0.75rem;
             letter-spacing: 3px;
@@ -387,10 +393,16 @@
 
         <div class="accent-line" aria-hidden="true"></div>
 
-        <p class="bottom-label">Software Engineering · Full-Stack Development</p>
+        <p class="bottom-label">
+            Software Engineering · Full-Stack Development
+        </p>
     </main>
 
     <script>
+        /* ========================================
+           13. AUTOMATIC TRANSITION TO HOME
+        ======================================== */
+
         window.addEventListener("load", () => {
             const reducedMotion = window.matchMedia(
                 "(prefers-reduced-motion: reduce)"
@@ -403,7 +415,7 @@
                 document.body.classList.add("leaving");
 
                 setTimeout(() => {
-                    window.location.replace("index.html");
+                    window.location.replace("home.html");
                 }, fadeDelay);
             }, transitionDelay);
         });

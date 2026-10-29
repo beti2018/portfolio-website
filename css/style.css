@@ -1264,3 +1264,203 @@ section {
         transform: none;
     }
 }
+
+/* ========================================
+   DAY 11: THE ROYAL PLATE PROJECT
+======================================== */
+
+.royal-plate-card .royal-plate-preview {
+    min-height: 190px;
+    padding: 28px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    overflow: hidden;
+    text-align: center;
+    color: #f7e5b0;
+    background:
+        radial-gradient(ellipse at center, #46331b 0%, transparent 70%),
+        linear-gradient(135deg, #17120b, #080706);
+    border-bottom: 1px solid rgba(212, 175, 94, 0.4);
+}
+
+.royal-plate-card .royal-plate-mark {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.1rem, 3vw, 1.7rem);
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.royal-plate-card .royal-plate-tagline {
+    color: #d5b979;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.9rem;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.royal-plate-card .royal-plate-decoration {
+    color: #d5b979;
+    font-size: 1.5rem;
+}
+
+.royal-plate-card .project-category {
+    color: #b794ff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.royal-plate-card .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.royal-plate-card .project-tech span {
+    padding: 6px 10px;
+    border: 1px solid rgba(167, 139, 250, 0.3);
+    border-radius: 20px;
+    color: #d8ccff;
+    background: rgba(139, 92, 246, 0.1);
+    font-size: 0.78rem;
+}
+
+.royal-plate-card .project-links {
+    margin-top: 22px;
+}
+
+.royal-plate-card .project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #c4b5fd;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.royal-plate-card .project-links a:hover {
+    color: #ffffff;
+}
+
+.royal-plate-card .project-links a:focus-visible {
+    outline: 2px solid #c4b5fd;
+    outline-offset: 5px;
+}
+
+
+/* ============================================
+   HOMEPAGE FIX: PROJECTS SECTION
+============================================ */
+
+/* Match the projects-grid class used in home.html */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 35px;
+  align-items: stretch;
+}
+
+/* Make project cards consistent */
+.projects-grid .project-card {
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, #130b1d, #09060d);
+}
+
+/* The project preview should fill the card width */
+.project-preview-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Project content spacing */
+.projects-grid .project-content {
+  padding: 26px;
+}
+
+.projects-grid .project-content h3 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 1.35rem;
+}
+
+.projects-grid .project-content > p:not(.project-category) {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* Technology tags */
+.projects-grid .project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.projects-grid .project-tech span {
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  color: #dfc5ff;
+  background: rgba(126, 34, 206, 0.1);
+  font-size: 0.8rem;
+}
+
+/* Live Demo link */
+.projects-grid .project-links {
+  margin-top: 22px;
+}
+
+.projects-grid .project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--purple);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.projects-grid .project-links a:hover {
+  color: var(--pink);
+}
+
+/* ============================================
+   HOMEPAGE FIX: CONTACT SECTION
+============================================ */
+
+.contact-section {
+  width: 100%;
+  margin: 0;
+  scroll-margin-top: calc(var(--header-height) + 20px);
+}
+
+.contact-section .contact-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   RESPONSIVE PROJECT LAYOUT
+============================================ */
+
+@media (max-width: 760px) {
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .projects-grid .project-content {
+    padding: 22px;
+  }
+}
+

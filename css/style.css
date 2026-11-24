@@ -1860,3 +1860,18 @@ section {
         font-size: 13px;
     }
 }
+
+
+/* DAY 24: LIGHT THEME */
+html[data-theme="light"] {
+  --bg: #f8f5fc;
+  --surface: #ffffff;
+  --surface-light: #eee7f7;
+  --text: #241633;
+  --muted: #62566f;
+  --purple: #8541bd;
+  --violet: #7135b5;
+  --pink: #b832c5;
+  --line: rgba(113, 53, 181, 0.2);
+}
+

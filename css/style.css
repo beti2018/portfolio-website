@@ -1875,3 +1875,24 @@ html[data-theme="light"] {
   --line: rgba(113, 53, 181, 0.2);
 }
 
+
+
+/* =========================================
+   LIGHT MODE — TEXT COLOR FIX
+========================================= */
+
+html[data-theme="light"] h1,
+html[data-theme="light"] h2,
+html[data-theme="light"] h3,
+html[data-theme="light"] h4 {
+  color: #1a1025;
+}
+
+html[data-theme="light"] p,
+html[data-theme="light"] li {
+  color: #5b506b;
+}
+
+html[data-theme="light"] .content-section > h2 {
+  color: #1a1025;
+}
